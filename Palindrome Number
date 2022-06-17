@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int y,z,c=0;
+    bool isPalindrome(int x) {
+        if(x < 0) return 0;
+     vector<int>v;
+        while(x!=0){
+            y=x%10;
+            v.push_back(y);
+            x=x/10;
+        }
+        z=v.size();
+        for(int i=0;i<z;i++){
+            if(v[i]==v[z-i-1]){
+                c++;
+            }
+        }
+        if(c==z){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+};
