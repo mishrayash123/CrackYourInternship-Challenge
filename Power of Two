@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+       for(int i=0;i<n;i++){
+           
+           if(pow(2,i)>2147483647){
+               return false;
+           }
+           int s=pow(2,i);
+           if(s==n){
+               return true;
+           }
+           if(s>n){
+               break;
+           }
+       }
+        return false;
+    }
+};
